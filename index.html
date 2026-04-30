@@ -180,12 +180,12 @@
 
             <li class="nav__item">
               <a
-                href="https://www.dropbox.com/s/jyy24gx9foquvxt/Dalia%20RB%20-CV-2023.pdf?dl=0"
-                target="_blank"
-                class="nav__link nav__link-button"
-              >
-                <i class="ri-download-2-line"></i> Download CV
-              </a>
+  href="assets/cv/DaliaBacari_CV.pdf"
+  target="_blank"
+  class="nav__link nav__link-button"
+>
+  <i class="ri-download-2-line"></i> Download CV
+</a>
             </li>
           </ul>
           <!-- Close button -->
@@ -193,7 +193,15 @@
             <i class="ri-close-line"></i>
           </div>
         </div>
-
+          <!-- Language toggle -->
+<div class="lang-toggle">
+  <button id="btn-en" class="lang-btn active" aria-label="English">
+    🇬🇧
+  </button>
+  <button id="btn-fr" class="lang-btn" aria-label="Français">
+    🇫🇷
+  </button>
+</div>
         <div class="nav__buttons">
           <!-- Theme button -->
           <i class="change-theme" id="theme-button"></i>
@@ -263,9 +271,9 @@
           </div>
 
           <div class="home__info">
+          
             <p class="home__description">
-              <b>Software Engineer and Web Developer</b>, French resident based in the UK, I've been actively working and learning for the past year following the completion of my internship at Carbon Six. With a year of hands-on experience and a self-taught approach, I've delved into the creation of cutting-edge websites. Complementing my skills with coursework in SEO marketing, Bootcamps, and AI technology, I specialize in developing highly user-friendly websites with advanced coding capabilities. I'm always looking for my next exciting challenge and project!
-
+              <b>Creative Web Developer</b>, based in Toulon, France.
             </p>
 
             <a href="#about" class="home__scroll">
@@ -283,14 +291,16 @@
       <section class="about section" id="about">
         <div class="about__container container grid">
           <h2 class="section__title-1">About Me.</h2>
-
+          
           <div class="about__perfil">
+            
             <div class="about__image">
               <img
                 src="/assets/img/photo3.jpeg"
                 alt="about-perfil"
                 class="about__img"
               />
+              
               <div class="about__shadow"></div>
 
               <div class="geometric-box"></div>
@@ -304,29 +314,35 @@
           </div>
 
           <div class="about__info">
-            <p class="about__description">
-              As a <b>Software Engineer</b> and <b> Web Developer</b>, my expertise lies in crafting beautiful and functional Web Applications, with a strong foundation in <b>HTML, CSS, </b>and <b>JavaScript</b>, complemented by experience in <b>React</b> and <b>Angular</b>. My enthusiasm for coding is fueled by the excitement of translating ideas into dynamic and user-friendly interfaces that captivate and convert. During my immersive seven-month <b>internship at Carbon Six</b>, I honed my skills, learning industry best practices such as <b>Tailwind CSS</b> and <b>Umbraco</b> that further enriched my proficiency.
-              <br><br>
             
-              During my <b>12-week boot camp</b> at Skillscity, I undertook a transformative project in collaboration with <b>IBM</b>. This hands-on experience involved utilizing Whisper AI to develop an application aimed at <b>training a model</b> capable of <b>translating </b>thousands of <b>Albanian</b> audio files <b>into English</b> in real time. This project not only enhanced my technical proficiency but also showcased my ability to work on innovative solutions in collaboration with industry leaders.
-              
+            <p class="about__description">
+              As a <b>Creative Web Developer</b> in training (Titre Pro DWWM, Bac+2), I design modern
+              and memorable web interfaces — from Figma mockup to deployment. I worked
+              <b>7 months at Carbon Six</b> as a Web Developer intern: CMS integration
+              (Umbraco, HubSpot, WordPress), client projects and quality standards.
+              <br><br>
+              During my <b>12-week bootcamp at Skills City</b> with <b>IBM</b>, I used Whisper AI
+              to translate thousands of Albanian audio files into English in real time.
+              Currently based in <b>Toulon, France</b> — actively seeking an
+              <b>internship from 28 Sept to 20 Nov 2025</b>.
             </p>
 
             <ul class="about__list">
               <li class="about__item">
-                <b>My Skills Are:</b> HTML, CSS, JavaScript, React, Angular, Typescript Git &
-                GitHub, Bootstrap, Tailwind, Umbraco, Figma and Python.
+                <b>My Skills:</b> HTML, CSS, JavaScript, React, Angular, TypeScript,
+                Git & GitHub, Bootstrap, Tailwind, Figma, PHP, SQL, WordPress,
+                Umbraco, HubSpot, Three.js, .NET and Python.
               </li>
             </ul>
 
             <div class="about__buttons">
               <a
-                href="https://www.dropbox.com/s/jyy24gx9foquvxt/Dalia%20RB%20-CV-2023.pdf?dl=0"
-                target="_blank"
-                class="button"
-              >
-                <i class="ri-download-2-line"></i> Download CV
-              </a>
+              href="assets/cv/DaliaBacari_CV.pdf"
+              target="_blank"
+              class="button"
+            >
+              <i class="ri-download-2-line"></i> Download CV
+            </a>
 
               <a href="#contact" class="button__ghost">
                 <i class="ri-send-plane-line"></i>
@@ -528,281 +544,194 @@
       </section>
 
       <!--==================== PROJECTS ====================-->
-      <section class="projects section" id="projects">
-        <h2 class="section__title-1">
-          <span>Projects.</span>
-        </h2>
-
-        <div class="projects__container container grid">
-          <article class="projects__card">
-            <a href="https://art-store-eta.vercel.app/" target="_blank" class="projects__link">
-              <div class="projects__image">
-                <div class="projects__img-container">
-                  <img src="/assets/img/RealEstateImage.png" alt="art-store-eta" class="projects__img" />
-                </div>
-                <a href="https://destate-adff6.web.app/" target="_blank" class="projects__button button">
-                  <i class="ri-arrow-right-up-line"></i>
-                </a>
+     <!-- REPLACE your entire <section class="projects ..."> block with this -->
+<section class="projects section" id="projects">
+  <h2 class="section__title-1"><span>Projects.</span></h2>
+  <div class="projects__container container grid">
+    <article class="projects__card" data-proj="calc">
+      <div class="projects__image">
+        <div class="projects__img-container calc-preview-thumb">
+          <div class="calc-thumb">
+            <div class="calc-thumb__blob"></div>
+            <div class="calc-thumb__blob"></div>
+            <div class="calc-thumb__sparkles">
+              <span class="calc-thumb__spark">✿</span>
+              <span class="calc-thumb__spark">✦</span>
+              <span class="calc-thumb__spark">❋</span>
+              <span class="calc-thumb__spark">♡</span>
+            </div>
+            <div class="calc-thumb__badge">✿ kawaii calc ✿</div>
+            <div class="calc-thumb__mini">
+              <div class="calc-thumb__screen">
+                <div class="calc-thumb__screen-label">✿ kawaii calc ✿</div>
+                <div class="calc-thumb__screen-num">42 ♡</div>
               </div>
-            </a>
-          
-            <div class="projects__content">
-              <h3 class="projects__subtitle">Website</h3>
-              <h2 class="projects__title">Real Estate Website</h2>
-          
-              <p class="projects__description">
-                
-              Built with Angular and TypeScript, offers users a streamlined experience to filter properties by price, type, and more. The platform's intuitive interface and integrated inquiry feature foster direct communication, enhancing user engagement in the real estate market.
-              </p>
-          
-              <div class="projects__buttons-container">
-                <a href="https://destate-adff6.web.app/" target="_blank" class="projects__demo button">
-                  <i class="ri-layout-6-line"></i> Live Demo
-                </a>
-                <a href="https://github.com/ailaDRB/Estate" target="_blank" class="projects__demo button">
-                  <i class="ri-github-line"></i> View
-                </a>
+              <div class="calc-thumb__keys">
+                <div class="calc-thumb__key calc-thumb__key--num"></div>
+                <div class="calc-thumb__key calc-thumb__key--num"></div>
+                <div class="calc-thumb__key calc-thumb__key--num"></div>
+                <div class="calc-thumb__key calc-thumb__key--op"></div>
+                <div class="calc-thumb__key calc-thumb__key--num"></div>
+                <div class="calc-thumb__key calc-thumb__key--num"></div>
+                <div class="calc-thumb__key calc-thumb__key--num"></div>
+                <div class="calc-thumb__key calc-thumb__key--op"></div>
+                <div class="calc-thumb__key calc-thumb__key--num"></div>
+                <div class="calc-thumb__key calc-thumb__key--num"></div>
+                <div class="calc-thumb__key calc-thumb__key--num"></div>
+                <div class="calc-thumb__key calc-thumb__key--pink"></div>
+                <div class="calc-thumb__key calc-thumb__key--num" style="grid-column:span 2"></div>
+                <div class="calc-thumb__key calc-thumb__key--num"></div>
               </div>
             </div>
-          </article>
-
-          <article class="projects__card">
-            <a
-              href="https://hama-admin.vercel.app/"
-              target="_blank"
-              class="projects__link"
-            >
-              <div class="projects__image">
-                <div class="projects__img-container">
-                <img
-                  src="/assets/img/LearnCoding.png"
-                  alt="project-1"
-                  class="projects__img"
-                />
-                </div>
-                <a
-                  href="https://ailadrb.github.io/WEB-LEARNING-APP/"
-                  target="_blank"
-                  class="projects__button button"
-                >
-                  <i class="ri-arrow-right-up-line"></i>
-                </a>
-              </div>
-            </a>
-
-            <div class="projects__content">
-              <h3 class="projects__subtitle">Website</h3>
-              <h2 class="projects__title">Learning To Code</h2>
-
-              <p class="projects__description">
-                Developed using HTML, CSS, and JavaScript, serves as a user-friendly platform hosting a curated collection of links and information for learning coding. This project reflects a commitment to providing accessible resources for aspiring coders.
-              </p>
-              <div class="projects__buttons-container">
-                <a
-                href="https://ailadrb.github.io/WEB-LEARNING-APP/"
-                target="_blank"
-                class="projects__demo button"
-              >
-                <i class="ri-layout-6-line"></i> Live Demo
-              </a>
-              <a
-                  href="https://github.com/ailaDRB/WEB-LEARNING-APP"
-                  target="_blank"
-                  class="projects__demo button"
-                >
-                  <i class="ri-github-line"></i> View
-                </a>
-            </div>
-          </div>
-
-            
-           
-             
-          </article>
-
-          <article class="projects__card">
-            <a
-              href="https://hamacorner.vercel.app/"
-              target="_blank"
-              class="projects__link"
-            >
-              <div class="projects__image">
-                <div class="projects__img-container">
-                <img
-                  src="/assets/img/RestaurantImage.png"
-                  alt="project-1"
-                  class="projects__img"
-                />
-                </div>
-                <a
-                  href="https://hamacorner.vercel.app/"
-                  target="_blank"
-                  class="projects__button button"
-                >
-                  <i class="ri-arrow-right-up-line"></i>
-                </a>
-              </div>
-            </a>
-
-            <div class="projects__content">
-              <h3 class="projects__subtitle">Website</h3>
-              <h2 class="projects__title">Restaurant Website</h2>
-
-              <p class="projects__description">
-                Restaurant ordering system using React, HTML, and CSS, offering customers an interactive platform select their desired food items for placing orders. The project combines React with well-designed HTML and CSS elements to streamline the online ordering process for restaurant patrons.
-              </p>
-              <div class="projects__buttons-container">
-
-            <a
-              href="https://ailadrb.github.io/Restaurant/"
-              target="_blank"
-              class="projects__demo button"
-            >
-              <i class="ri-layout-6-line"></i> Live Demo
-            </a>
-            <a href="https://github.com/ailaDRB/Restaurant" target="_blank" class="projects__demo button">
-              <i class="ri-github-line"></i> View
-            </a>
-          </div>
-          </div>
-          </article>
-
-          <article class="projects__card">
-            <a
-              href="https://daliarb-weather.netlify.app/"
-              target="_blank"
-              class="projects__link"
-            >
-              <div class="projects__image">
-                <div class="projects__img-container">
-                <img
-                  src="/assets/img/weatherappimage.png"
-                  alt="project-1"
-                  class="projects__img"
-                />
-                </div>
-                <a
-                  href="https://daliarb-weather.netlify.app/"
-                  target="_blank"
-                  class="projects__button button"
-                >
-                  <i class="ri-arrow-right-up-line"></i>
-                </a>
-              </div>
-            </a>
-
-            <div class="projects__content">
-              <h3 class="projects__subtitle">App</h3>
-              <h2 class="projects__title">Weather App</h2>
-
-              <p class="projects__description">
-                A small weather application utilizing REST APIs to provide real-time weather information. The project seamlessly integrates design elements with dynamic functionality, offering users an intuitive interface to access accurate and up-to-date weather data.
-              </p>
-              <div class="projects__buttons-container">
-            
-
-            <a
-              href="https://daliarb-weather.netlify.app/"
-              target="_blank"
-              class="projects__demo button"
-            >
-              <i class="ri-layout-6-line"></i> Live Demo
-            </a>
-            <a href="https://github.com/ailaDRB/WEB-LEARNING-APP" target="_blank" class="projects__demo button">
-              <i class="ri-github-line"></i> View
-            </a>
-          </div>
-            </div>
-          </article>
-
-          <article class="projects__card">
-            <a
-              href="https://ailadrb.github.io/DaliaRB-Portfolio/"
-              target="_blank"
-              class="projects__link"
-            >
-              <div class="projects__image">
-                <div class="projects__img-container">
-                <img
-                  src="/assets/img/Firstportfolio.png"
-                  alt="project-1"
-                  class="projects__img"
-                />
-                </div>
-                <a
-                  href="https://ailadrb.github.io/DaliaRB-Portfolio/"
-                  target="_blank"
-                  class="projects__button button"
-                >
-                  <i class="ri-arrow-right-up-line"></i>
-                </a>
-              </div>
-            </a>
-
-            <div class="projects__content">
-              <h3 class="projects__subtitle">Website</h3>
-              <h2 class="projects__title">First Website Portfolio</h2>
-
-              <p class="projects__description">
-                My first web portfolio, I employed HTML, CSS, and JavaScript to craft a visually appealing and interactive website. These technologies enabled me to showcase my skills creatively, ensuring a dynamic and engaging online representation of my professional profile.
-              </p>
-              <div class="projects__buttons-container"> 
-
-              
-            
-
-            <a
-              href="https://ailadrb.github.io/DaliaRB-Portfolio/"
-              target="_blank"
-              class="projects__demo button"
-            >
-              <i class="ri-layout-6-line"></i> Live Demo
-            </a>
-            <a href="https://ailadrb.github.io/DaliaRB-Portfolio/" target="_blank" class="projects__demo button">
-              <i class="ri-github-line"></i> View
-            </a>
-          </div>
-          </div>
-          </article>
-        </div>
-      </section>
-
-      <!--==================== MUSIC ====================-->
-      <section class="music section">
-        <h2 class="section__title-2">
-          <span>Music.<i class="ri-spotify-line"></i></span>
-        </h2>
-        <p class="music__title-sub">
-          I love listening to music, it helps me relax and focus on my work.
-          Here are some of my favorite songs.
-        </p>
-        <div class="music__container container grid">
-          <div class="music__box" id="music-box-left">
-            <iframe
-              title="Playlist Cá Hồi Hoang"
-              style="border-radius: 12px"
-              src="https://open.spotify.com/embed/playlist/37i9dQZF1DWUZ5bk6qqDSy?utm_source=generator"
-              width="100%"
-              height="410"
-              frameborder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
-          </div>
-          <div class="music__box" id="music-box-right">
-            <iframe
-              title="Playlist Đen Vâu"
-              style="border-radius: 12px"
-              src="https://open.spotify.com/embed/playlist/37i9dQZF1DWUXxc8Mc6MmJ?utm_source=generator"
-              width="100%"
-              height="410"
-              frameborder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
           </div>
         </div>
-      </section>
+        <a href="kawaii-calculator.html" target="_blank" class="projects__button button"><i class="ri-arrow-right-up-line"></i></a>
+      </div>
+      <div class="projects__content">
+        <h3 class="projects__subtitle">App</h3>
+        <h2 class="projects__title">Kawaii Calculator ✿</h2>
+        <p class="projects__description">A pastel glassmorphism calculator with sparkle animations, memory functions and keyboard support. Pure HTML, CSS and JS.</p>
+        <div class="projects__buttons-container">
+          <a href="kawaii-calculator.html" target="_blank" class="projects__demo button"><i class="ri-layout-6-line"></i> Live Demo</a>
+          <a href="https://github.com/ailaDRB" target="_blank" class="projects__demo button"><i class="ri-github-line"></i> View</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="projects__card" data-proj="kanban">
+      <div class="projects__image">
+        <div class="projects__img-container ocean-preview-thumb">
+          <div class="ocean-thumb">
+            <div class="ocean-thumb__waves"></div>
+            <div class="ocean-thumb__fish">🐠</div>
+            <div class="ocean-thumb__fish ocean-thumb__fish--2">🐟</div>
+            <div class="ocean-thumb__fish ocean-thumb__fish--3">🐡</div>
+            <span class="ocean-thumb__label">𓆉 Ocean Kanban</span>
+            <div class="ocean-thumb__cols">
+              <div class="ocean-thumb__col"></div>
+              <div class="ocean-thumb__col"></div>
+              <div class="ocean-thumb__col"></div>
+            </div>
+            <div class="ocean-thumb__bubbles">
+              <div class="ocean-thumb__bubble"></div>
+              <div class="ocean-thumb__bubble"></div>
+              <div class="ocean-thumb__bubble"></div>
+              <div class="ocean-thumb__bubble"></div>
+            </div>
+            <div class="ocean-thumb__badge">🚧 Coming Soon</div>
+          </div>
+        </div>
+        <a href="#" class="projects__button button"><i class="ri-arrow-right-up-line"></i></a>
+      </div>
+      <div class="projects__content">
+        <h3 class="projects__subtitle">App</h3>
+        <h2 class="projects__title">Ocean Kanban Board</h2>
+        <p class="projects__description">An underwater-themed Kanban todo app with animated whales, fish and bubbles. Glassmorphism columns, drag-and-drop tasks and full ocean vibes.</p>
+        <div class="projects__buttons-container">
+          <a href="#" class="projects__demo button ocean-coming-btn">
+            <i class="ri-time-line"></i> <span>Live Demo — Soon</span>
+          </a>
+          <a href="https://github.com/ailaDRB" target="_blank" class="projects__demo button"><i class="ri-github-line"></i> View</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="projects__card" data-proj="realestate">
+      <div class="projects__image">
+        <div class="projects__img-container">
+          <img src="/assets/img/RealEstateImage.png" alt="Real Estate" class="projects__img" />
+        </div>
+        <a href="https://destate-adff6.web.app/" target="_blank" class="projects__button button"><i class="ri-arrow-right-up-line"></i></a>
+      </div>
+      <div class="projects__content">
+        <h3 class="projects__subtitle">Website</h3>
+        <h2 class="projects__title">Real Estate Website</h2>
+        <p class="projects__description">Built with Angular and TypeScript, offers users a streamlined experience to filter properties by price, type, and more. Intuitive interface with integrated inquiry feature.</p>
+        <div class="projects__buttons-container">
+          <a href="https://destate-adff6.web.app/" target="_blank" class="projects__demo button"><i class="ri-layout-6-line"></i> Live Demo</a>
+          <a href="https://github.com/ailaDRB/Estate" target="_blank" class="projects__demo button"><i class="ri-github-line"></i> View</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="projects__card" data-proj="learning">
+      <div class="projects__image">
+        <div class="projects__img-container">
+          <img src="/assets/img/LearnCoding.png" alt="Learning to Code" class="projects__img" />
+        </div>
+        <a href="https://ailadrb.github.io/WEB-LEARNING-APP/" target="_blank" class="projects__button button"><i class="ri-arrow-right-up-line"></i></a>
+      </div>
+      <div class="projects__content">
+        <h3 class="projects__subtitle">Website</h3>
+        <h2 class="projects__title">Learning To Code</h2>
+        <p class="projects__description">A user-friendly platform built with HTML, CSS and JavaScript, hosting a curated collection of links and resources for learning to code.</p>
+        <div class="projects__buttons-container">
+          <a href="https://ailadrb.github.io/WEB-LEARNING-APP/" target="_blank" class="projects__demo button"><i class="ri-layout-6-line"></i> Live Demo</a>
+          <a href="https://github.com/ailaDRB/WEB-LEARNING-APP" target="_blank" class="projects__demo button"><i class="ri-github-line"></i> View</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="projects__card" data-proj="restaurant">
+      <div class="projects__image">
+        <div class="projects__img-container">
+          <img src="/assets/img/RestaurantImage.png" alt="Restaurant" class="projects__img" />
+        </div>
+        <a href="https://ailadrb.github.io/Restaurant/" target="_blank" class="projects__button button"><i class="ri-arrow-right-up-line"></i></a>
+      </div>
+      <div class="projects__content">
+        <h3 class="projects__subtitle">Website</h3>
+        <h2 class="projects__title">Restaurant Website</h2>
+        <p class="projects__description">Restaurant ordering system using React, HTML and CSS. Customers can interactively select food items and place orders through a beautifully designed interface.</p>
+        <div class="projects__buttons-container">
+          <a href="https://ailadrb.github.io/Restaurant/" target="_blank" class="projects__demo button"><i class="ri-layout-6-line"></i> Live Demo</a>
+          <a href="https://github.com/ailaDRB/Restaurant" target="_blank" class="projects__demo button"><i class="ri-github-line"></i> View</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="projects__card" data-proj="weather">
+      <div class="projects__image">
+        <div class="projects__img-container">
+          <img src="/assets/img/weatherappimage.png" alt="Weather App" class="projects__img" />
+        </div>
+        <a href="https://daliarb-weather.netlify.app/" target="_blank" class="projects__button button"><i class="ri-arrow-right-up-line"></i></a>
+      </div>
+      <div class="projects__content">
+        <h3 class="projects__subtitle">App</h3>
+        <h2 class="projects__title">Weather App</h2>
+        <p class="projects__description">A weather app using REST APIs for real-time weather data. Clean interface with dynamic functionality for accurate, up-to-date weather information.</p>
+        <div class="projects__buttons-container">
+          <a href="https://daliarb-weather.netlify.app/" target="_blank" class="projects__demo button"><i class="ri-layout-6-line"></i> Live Demo</a>
+          <a href="https://github.com/ailaDRB/WEB-LEARNING-APP" target="_blank" class="projects__demo button"><i class="ri-github-line"></i> View</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- <article class="projects__card" data-proj="portfolio">
+      <div class="projects__image">
+        <div class="projects__img-container">
+          <img src="/assets/img/Firstportfolio.png" alt="First Portfolio" class="projects__img" />
+        </div>
+        <a href="https://ailadrb.github.io/DaliaRB-Portfolio/" target="_blank" class="projects__button button"><i class="ri-arrow-right-up-line"></i></a>
+      </div>
+      <div class="projects__content">
+        <h3 class="projects__subtitle">Website</h3>
+        <h2 class="projects__title">First Portfolio</h2>
+        <p class="projects__description">My first web portfolio built with HTML, CSS and JavaScript to craft a visually appealing and interactive website showcasing my skills and professional profile.</p>
+        <div class="projects__buttons-container">
+          <a href="https://ailadrb.github.io/DaliaRB-Portfolio/" target="_blank" class="projects__demo button"><i class="ri-layout-6-line"></i> Live Demo</a>
+          <a href="https://ailadrb.github.io/DaliaRB-Portfolio/" target="_blank" class="projects__demo button"><i class="ri-github-line"></i> View</a>
+        </div>
+      </div>
+    </article> -->
+
+   
+
+  </div>
+</section>
+  
+  
 
       <!--==================== CONTACT ====================-->
       <section class="contact section" id="contact">

@@ -11,26 +11,75 @@
   }
 }
 
-/* Navigation for mobile devices */
+/* =============== MOBILE: hide custom cursor =============== */
+@media (hover: none) or (pointer: coarse) {
+  .cursor,
+  .cursor-follower {
+    display: none !important;
+  }
+
+  body {
+    cursor: auto;
+  }
+
+  a, button, .change-theme, .nav__toggle,
+  .nav__close, .home__scroll-box, .lang-btn,
+  .skill-tag, .nav__link {
+    cursor: pointer;
+  }
+
+  /* Disable magnetic / tilt on touch */
+  .tilt-card {
+    transform: none !important;
+  }
+}
+
+/* =============== Navigation for mobile devices =============== */
 @media screen and (max-width: 1150px) {
   .nav__menu {
     position: fixed;
     top: -150%;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.75);
+    background: linear-gradient(
+      160deg,
+      hsla(240, 12%, 6%, 0.92),
+      hsla(262, 30%, 8%, 0.96)
+    );
     width: 100%;
     padding-block: 1.8rem 5rem;
     text-align: center;
-    backdrop-filter: blur(8px);
-    transition: top 0.4s ease;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    transition: top 0.45s cubic-bezier(0.77, 0, 0.175, 1);
   }
 
   .show-menu {
     top: 0;
   }
+
+  /* Orbs smaller on mobile */
+  .orb-1 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .orb-2 {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Stats row wraps tighter on mobile */
+  .stats {
+    gap: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
 }
 
-/* For small devices */
+/* =============== For small devices =============== */
 @media screen and (max-width: 340px) {
   .container {
     margin-inline: 1rem;
@@ -60,6 +109,23 @@
   .contact__mail {
     padding: 5rem 0.5rem 2.5rem;
   }
+
+  .skill-tags {
+    gap: 0.35rem;
+  }
+
+  .skill-tag {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .stats {
+    gap: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 385px) {
@@ -72,7 +138,7 @@
   }
 }
 
-/* For medium devices */
+/* =============== For medium devices =============== */
 @media screen and (min-width: 576px) {
   .home__container,
   .about__container,
@@ -135,9 +201,18 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
+
+  /* Stats row on medium screens */
+  .stats {
+    gap: 2.5rem;
+  }
+
+  .stat-number {
+    font-size: 2.8rem;
+  }
 }
 
-/* For large devices */
+/* =============== For large devices =============== */
 @media screen and (min-width: 1150px) {
   .container {
     margin-inline: auto;
@@ -157,6 +232,7 @@
     transform: scale(1.2);
   }
 
+  /* Nav */
   .nav {
     height: calc(var(--header-height) + 2rem);
     column-gap: 4rem;
@@ -176,11 +252,21 @@
 
   .nav__menu {
     margin-left: auto;
+    /* reset mobile glass panel */
+    background: transparent;
+    backdrop-filter: none;
+    border-bottom: none;
+    position: static;
+    padding: 0;
   }
 
   .nav__link {
     color: var(--text-color);
     font-size: var(--normal-font-size);
+  }
+
+  .nav__link::before {
+    display: none; /* hide arrow on desktop */
   }
 
   .nav__link:hover {
@@ -196,18 +282,22 @@
   }
 
   .nav__link-button {
-    background-color: var(--black-color);
-    color: var(--white-color);
-    padding: 1.1rem 1.5rem;
+    background: linear-gradient(135deg, var(--first-color), var(--accent));
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px var(--glow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .nav__link-button:hover {
-    color: var(--white-color);
-    background-color: var(--first-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--glow);
   }
 
   .nav__link-button::after {
-    background-color: transparent;
+    display: none;
   }
 
   .change-theme {
@@ -218,6 +308,7 @@
     color: var(--title-color);
   }
 
+  /* Home */
   .home__container {
     grid-template-columns: repeat(2, 460px);
     gap: 2rem 4rem;
@@ -265,7 +356,7 @@
     content: "";
     width: 32px;
     height: 2px;
-    background-color: var(--title-color);
+    background: linear-gradient(90deg, var(--first-color), var(--accent));
     position: absolute;
     left: 0;
     top: 14px;
@@ -283,6 +374,8 @@
     color: var(--text-color);
     font-size: var(--small-font-size);
     font-weight: var(--font-medium);
+    font-family: var(--display-font);
+    letter-spacing: 0.05em;
   }
 
   .home__scroll-box {
@@ -322,6 +415,7 @@
     font-size: 1.5rem;
   }
 
+  /* About */
   .about__container {
     grid-template-columns: 440px 525px;
     gap: 1rem 9rem;
@@ -390,13 +484,30 @@
   }
 
   .about__list {
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
   }
 
   .about__buttons {
     justify-content: initial;
   }
 
+  /* Stats on desktop */
+  .stats {
+    justify-content: flex-start;
+    gap: 3rem;
+    padding: 1.5rem 0 2rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  /* Skill tags on desktop */
+  .skill-tags {
+    justify-content: flex-start;
+  }
+
+  /* Experience */
   .experience__container {
     gap: 3rem;
     padding-block: 1rem;
@@ -406,6 +517,7 @@
     padding: 2rem 2rem 3rem;
   }
 
+  /* Projects */
   .projects__container {
     grid-template-columns: repeat(3, 352px);
     padding-block: 3rem 1rem;
@@ -427,6 +539,7 @@
     right: 1.25rem;
   }
 
+  /* Contact */
   .contact__container {
     grid-template-columns: 440px 670px;
     grid-template-rows: initial;
@@ -504,6 +617,7 @@
     background-color: var(--container-color);
   }
 
+  /* Footer */
   .footer__container {
     padding-block: 4rem;
     grid-template-columns: repeat(2, 1fr);
@@ -513,5 +627,17 @@
   .footer__links {
     column-gap: 3rem;
     order: 1;
+  }
+}
+
+/* =============== Extra large screens =============== */
+@media screen and (min-width: 1440px) {
+  .home__container {
+    grid-template-columns: repeat(2, 520px);
+    gap: 2rem 6rem;
+  }
+
+  .projects__container {
+    grid-template-columns: repeat(3, 400px);
   }
 }
