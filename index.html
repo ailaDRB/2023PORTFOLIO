@@ -620,7 +620,15 @@
           <div class="contact__mail">
             <h2 class="contact__title">Send Me A Message</h2>
 
-            <form action="" class="contact__form" id="contact-form">
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="website"
+              class="contact__form"
+              id="contact-form"
+            >
+              <input type="hidden" name="form-name" value="contact" />
               <div class="contact__group">
                 <div class="contact__box">
                   <input
@@ -764,8 +772,6 @@
     </a>
     <!--=============== SCROLLREVEAL ===============-->
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-    <!--=============== EMAIL JS ===============-->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
   </body>

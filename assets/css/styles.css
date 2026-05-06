@@ -224,14 +224,15 @@ body.dark-theme .kawaii-cat {
 
 /*=============== DARK THEME — NIGHT SKY ===============*/
 body.dark-theme {
-  --first-color: hsl(260, 78%, 70%);
-  --accent: hsl(210, 85%, 65%);
-  --accent-2: hsl(300, 58%, 68%);
-  --black-color: hsl(230, 20%, 86%);
-  --black-color-light: hsl(230, 14%, 52%);
+  --first-color: hsl(260, 78%, 75%);
+  --accent: hsl(210, 85%, 70%);
+  --accent-2: hsl(300, 58%, 75%);
+  --black-color: hsl(0, 0%, 100%);
+  --black-color-light: hsl(230, 14%, 78%);
   --white-color: hsl(230, 22%, 10%);
-  --title-color: hsl(230, 28%, 93%);
-  --text-color: hsl(230, 16%, 66%);
+  --title-color: hsl(0, 0%, 100%);
+  --text-color: hsl(230, 20%, 92%);
+  --text-color-light: hsl(230, 18%, 80%);
   --body-color: hsl(230, 26%, 7%);
   --container-color: hsl(230, 22%, 10%);
   --glass-color: hsla(240, 30%, 12%, 0.7);
@@ -246,6 +247,53 @@ body.dark-theme {
   --bubble-1: hsla(260, 78%, 70%, 0.13);
   --bubble-2: hsla(210, 85%, 65%, 0.1);
   --bubble-3: hsla(300, 58%, 68%, 0.1);
+}
+
+/* Dark mode — boost text visibility everywhere */
+body.dark-theme,
+body.dark-theme p,
+body.dark-theme li,
+body.dark-theme span,
+body.dark-theme label,
+body.dark-theme .home__description,
+body.dark-theme .about__description,
+body.dark-theme .projects__description,
+body.dark-theme .contact__description-1,
+body.dark-theme .contact__description-2,
+body.dark-theme .contact__social-description-1,
+body.dark-theme .contact__social-description-2,
+body.dark-theme .footer__link,
+body.dark-theme .footer__copy,
+body.dark-theme .nav__link,
+body.dark-theme .stat-label,
+body.dark-theme .skill-tag,
+body.dark-theme .experience__box article h3,
+body.dark-theme .article__title h3,
+body.dark-theme .home__scroll-text {
+  color: #fff !important;
+}
+
+body.dark-theme b,
+body.dark-theme strong {
+  color: #fff !important;
+  font-weight: 700;
+}
+
+body.dark-theme .contact__input,
+body.dark-theme .contact__input::placeholder {
+  color: #fff;
+}
+body.dark-theme .contact__input::placeholder { opacity: 0.6; }
+
+body.dark-theme .section__title-1,
+body.dark-theme .section__title-2,
+body.dark-theme .section__title-3,
+body.dark-theme .home__name,
+body.dark-theme .projects__title,
+body.dark-theme .contact__title,
+body.dark-theme .nav__title,
+body.dark-theme .nav__name {
+  color: #fff !important;
 }
 
 body.dark-theme::after {

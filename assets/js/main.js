@@ -179,7 +179,7 @@ if (aboutInfoEl) {
   if (statsSec) statsObs.observe(statsSec);
 }
 
-/*=============== EMAIL JS ===============*/
+/*=============== CONTACT FORM (Netlify Forms) ===============*/
 var contactFormEl    = document.getElementById('contact-form');
 var contactMessageEl = document.getElementById('contact-message');
 var btnSendEl        = document.getElementById('contact-button');
@@ -196,16 +196,30 @@ if (contactFormEl) {
     }
     btnSendEl.innerHTML = "<i class='ri-send-plane-line'></i> Sending...";
     btnSendEl.disabled = true;
-    emailjs.sendForm('service_yb8m8y9', 'template_feenxz8', contactFormEl, 'zzr-kcDLkfLIIk5ER')
-      .then(function () {
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: (function () {
+        var data = new FormData(contactFormEl);
+        var pairs = [];
+        data.forEach(function (value, key) {
+          pairs.push(encodeURIComponent(key) + '=' + encodeURIComponent(value));
+        });
+        return pairs.join('&');
+      })()
+    })
+      .then(function (resp) {
+        if (!resp.ok) throw new Error('Network response was not ok');
         contactMessageEl.innerHTML = 'Message sent \u2705';
         setTimeout(function () { contactMessageEl.innerHTML = ''; }, 5000);
         contactFormEl.reset();
-        btnSendEl.innerHTML = "<i class='ri-send-plane-line'></i> Send Message";
-        btnSendEl.disabled = false;
-      }, function () {
-        contactMessageEl.innerHTML = 'Error \u274c';
-        setTimeout(function () { contactMessageEl.innerHTML = ''; }, 5000);
+      })
+      .catch(function () {
+        contactMessageEl.innerHTML = 'Error \u274c \u2014 try emailing bacaridalia@outlook.fr';
+        setTimeout(function () { contactMessageEl.innerHTML = ''; }, 8000);
+      })
+      .then(function () {
         btnSendEl.innerHTML = "<i class='ri-send-plane-line'></i> Send Message";
         btnSendEl.disabled = false;
       });
