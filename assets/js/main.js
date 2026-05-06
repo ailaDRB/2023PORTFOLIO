@@ -162,9 +162,9 @@ var aboutInfoEl = document.querySelector('.about__info');
 if (aboutInfoEl) {
   aboutInfoEl.insertAdjacentHTML('beforeend',
     '<div class="stats">' +
-      '<div class="stat-item"><span class="stat-number" data-target="3">0+</span><span class="stat-label">Years Exp.</span></div>' +
-      '<div class="stat-item"><span class="stat-number" data-target="7">0+</span><span class="stat-label">Projects</span></div>' +
-      '<div class="stat-item"><span class="stat-number" data-target="18">0+</span><span class="stat-label">Skills</span></div>' +
+      '<div class="stat-item"><span class="stat-number" data-target="7">0+</span><span class="stat-label">Months @ Carbon Six</span></div>' +
+      '<div class="stat-item"><span class="stat-number" data-target="6">0+</span><span class="stat-label">Projects shipped</span></div>' +
+      '<div class="stat-item"><span class="stat-number" data-target="14">0+</span><span class="stat-label">Skills</span></div>' +
     '</div>');
   function animateCounter(el) {
     var target = parseInt(el.getAttribute('data-target'), 10);
@@ -186,6 +186,14 @@ var btnSendEl        = document.getElementById('contact-button');
 if (contactFormEl) {
   contactFormEl.addEventListener('submit', function (e) {
     e.preventDefault();
+    // Honeypot check — silently drop bot submissions
+    var hp = document.getElementById('website');
+    if (hp && hp.value.trim() !== '') {
+      contactMessageEl.innerHTML = 'Message sent ✅';
+      setTimeout(function () { contactMessageEl.innerHTML = ''; }, 5000);
+      contactFormEl.reset();
+      return;
+    }
     btnSendEl.innerHTML = "<i class='ri-send-plane-line'></i> Sending...";
     btnSendEl.disabled = true;
     emailjs.sendForm('service_yb8m8y9', 'template_feenxz8', contactFormEl, 'zzr-kcDLkfLIIk5ER')
@@ -248,6 +256,9 @@ var T = {
       + ' Passionate about UX and new technologies \u2014 I design modern, memorable interfaces'
       + ' from Figma mockup to deployment.',
     'scroll-text': 'Scroll Down',
+    'home-availability': 'Available for internship · 28 Sept → 20 Nov 2025 · Toulon or remote',
+    'home-cta-cv': 'Download CV',
+    'home-cta-contact': 'Contact Me',
     'about-title': 'About Me.',
     'about-desc': 'As a <b>Creative Web Developer</b> in training (Titre Pro Développeur Web et Web Mobile, Bac+2),'
       + ' I design modern and memorable web interfaces \u2014 from Figma mockup to deployment.'
@@ -257,7 +268,7 @@ var T = {
       + ' to translate thousands of Albanian audio files into English in real time.'
       + ' Currently based in <b>Toulon, France</b> \u2014 actively seeking an'
       + ' <b>internship from 28 Sept to 20 Nov 2025</b>.',
-    'about-cv-btn': 'Download CV', 'about-contact-btn': 'Contact Me',
+    'about-cv-view-btn': 'View CV', 'about-cv-btn': 'Download CV', 'about-contact-btn': 'Contact Me',
     'exp-title': 'Experience.', 'exp-frontend': 'Front End', 'exp-backend': 'Back End',
     'projects-title': 'Projects.',
     'music-title': 'Music.',
@@ -272,19 +283,19 @@ var T = {
     'contact-social1': 'Does not send email', 'contact-social2': 'Write me on my social networks',
     'footer-about': 'About', 'footer-exp': 'Experience', 'footer-projects': 'Projects',
     'footer-copy': '\u00a9 All Rights Reserved By',
-    'stat-years': 'Years Exp.', 'stat-projects': 'Projects', 'stat-skills': 'Skills',
+    'stat-years': 'Months @ Carbon Six', 'stat-projects': 'Projects shipped', 'stat-skills': 'Skills',
     'wc-badge': '\u273f creative web developer \u273f',
     'wc-hi': "hi, i'm dalia \u2726",
     'wc-sub': 'based in <b>Toulon, France</b> \u2014 D\u00E9veloppeur Web et Web Mobile student &amp; <b>open to internship</b> \uD83C\uDF37<br>'
             + 'i build cute, functional things \u2014 glassmorphism, pastel pixels &amp; clean code.',
     'wc-btn': 'enter \u2661',
-    'proj-realestate': 'Built with Angular and TypeScript \u2014 filter properties by price, type and more. Intuitive interface with integrated inquiry feature.',
-    'proj-learning': 'A platform built with HTML, CSS and JavaScript hosting curated links and resources for learning to code.',
-    'proj-restaurant': 'Restaurant ordering system in React, HTML and CSS. Customers interactively select dishes through a beautifully designed interface.',
-    'proj-weather': 'Weather app using REST APIs for real-time data. Clean interface with dynamic functionality.',
+    'proj-realestate': "Helps house hunters find the right property in seconds \u2014 smart filters by price, type and location, and a built-in inquiry form to contact owners directly. Angular + TypeScript.",
+    'proj-learning': "A one-stop hub for new developers \u2014 handpicked tutorials, docs and tools, organised so beginners stop wasting time hunting through random YouTube playlists.",
+    'proj-restaurant': "Lets customers browse the menu and place orders right from their phone \u2014 no calls, no queues. A polished React interface built around the customer's flow.",
+    'proj-weather': 'Tells you in one glance if you need an umbrella \u2014 clean, fast, accurate. Real-time data from a public REST API and a UI tuned for daily use.',
     'proj-portfolio': 'My first web portfolio in HTML, CSS and JavaScript. Visually appealing and interactive showcase of my professional profile.',
-    'proj-calc': 'Pastel glassmorphism calculator with sparkle animations, memory functions and keyboard support. Pure HTML, CSS and JS.',
-    'proj-kanban': 'Underwater-themed Kanban app with animated whales, fish and bubbles. Glassmorphism columns and full ocean vibes.',
+    'proj-calc': 'Turning a boring everyday tool into something delightful \u2014 full keyboard support, memory functions and sparkle animations. Built from scratch with HTML, CSS & JS.',
+    'proj-kanban': "Underwater-themed Kanban app with animated whales, fish and bubbles. Glassmorphism columns and full ocean vibes.",
     'proj-soon': 'Live Demo \u2014 Soon'
   },
   fr: {
@@ -296,6 +307,9 @@ var T = {
       + ' Passionn\u00e9e par l\'UX et les nouvelles technologies \u2014 je con\u00e7ois des'
       + ' interfaces modernes et m\u00e9morables, de la maquette Figma au d\u00e9ploiement.',
     'scroll-text': 'D\u00e9filer',
+    'home-availability': 'Disponible pour un stage \u00b7 28 sept \u2192 20 nov 2025 \u00b7 Toulon ou remote',
+    'home-cta-cv': 'T\u00e9l\u00e9charger CV',
+    'home-cta-contact': 'Me Contacter',
     'about-title': '\u00c0 Propos.',
     'about-desc': 'D\u00e9veloppeuse web cr\u00e9ative en formation (<b>Titre Pro D\u00e9veloppeur Web et Web Mobile, Bac+2</b>),'
       + ' je con\u00e7ois des interfaces modernes et m\u00e9morables \u2014 de la maquette Figma au d\u00e9ploiement.'
@@ -305,7 +319,7 @@ var T = {
       + ' j\'ai utilis\u00e9 Whisper AI pour traduire des milliers de fichiers audio albanais en anglais en temps r\u00e9el.'
       + ' Actuellement \u00e0 <b>Toulon, France</b> \u2014 en recherche d\'un'
       + ' <b>stage du 28 sept au 20 nov 2025</b>.',
-    'about-cv-btn': 'T\u00e9l\u00e9charger CV', 'about-contact-btn': 'Me Contacter',
+    'about-cv-view-btn': 'Voir le CV', 'about-cv-btn': 'T\u00e9l\u00e9charger CV', 'about-contact-btn': 'Me Contacter',
     'exp-title': 'Exp\u00e9rience.', 'exp-frontend': 'Front End', 'exp-backend': 'Back End',
     'projects-title': 'Projets.',
     'music-title': 'Musique.',
@@ -320,18 +334,18 @@ var T = {
     'contact-social1': "N'envoie pas d'email", 'contact-social2': 'Contactez-moi sur mes r\u00e9seaux',
     'footer-about': '\u00c0 Propos', 'footer-exp': 'Exp\u00e9rience', 'footer-projects': 'Projets',
     'footer-copy': '\u00a9 Tous droits r\u00e9serv\u00e9s par',
-    'stat-years': "Ans d'exp.", 'stat-projects': 'Projets', 'stat-skills': 'Comp\u00e9tences',
+    'stat-years': 'Mois @ Carbon Six', 'stat-projects': 'Projets livr\u00e9s', 'stat-skills': 'Comp\u00e9tences',
     'wc-badge': '\u273f d\u00e9veloppeuse web cr\u00e9ative \u273f',
     'wc-hi': 'bonjour, je suis dalia \u2726',
     'wc-sub': 'bas\u00e9e \u00e0 <b>Toulon</b> \u2014 en formation D\u00e9veloppeur Web et Web Mobile &amp; <b>en recherche de stage</b> \uD83C\uDF37<br>'
             + 'je cr\u00e9e des choses mignonnes et fonctionnelles \u2014 glassmorphisme &amp; code propre.',
     'wc-btn': 'entrer \u2661',
-    'proj-realestate': 'Avec Angular et TypeScript \u2014 filtrez les propri\u00e9t\u00e9s par prix et type. Interface intuitive avec syst\u00e8me de contact int\u00e9gr\u00e9.',
-    'proj-learning': 'Plateforme HTML, CSS et JavaScript regroupant des ressources pour apprendre \u00e0 coder.',
-    'proj-restaurant': 'Commande en ligne React, HTML et CSS. Les clients s\u00e9lectionnent leurs plats via une interface soign\u00e9e.',
-    'proj-weather': 'Application m\u00e9t\u00e9o avec REST APIs. Interface \u00e9pur\u00e9e pour des donn\u00e9es en temps r\u00e9el.',
+    'proj-realestate': "Aide \u00e0 trouver le bien parfait en quelques secondes \u2014 filtres intelligents par prix, type et localisation, formulaire de contact direct propri\u00e9taire. Angular + TypeScript.",
+    'proj-learning': "Un hub centralis\u00e9 pour les d\u00e9butants \u2014 tutos, docs et outils s\u00e9lectionn\u00e9s, pour arr\u00eater de perdre du temps sur des playlists YouTube al\u00e9atoires.",
+    'proj-restaurant': "Permet aux clients de consulter le menu et commander depuis leur t\u00e9l\u00e9phone \u2014 fini les appels et files d'attente. Interface React pens\u00e9e pour le client.",
+    'proj-weather': "Dit en un coup d'\u0153il s'il faut prendre un parapluie \u2014 simple, rapide, pr\u00e9cis. Donn\u00e9es en temps r\u00e9el via REST API.",
     'proj-portfolio': 'Mon premier portfolio HTML, CSS et JavaScript. Pr\u00e9sentation interactive de mon profil.',
-    'proj-calc': 'Calculatrice glassmorphism pastel avec animations, m\u00e9moire et clavier. HTML, CSS et JS purs.',
+    'proj-calc': "Transformer un outil banal en exp\u00e9rience plaisante \u2014 support clavier complet, fonctions m\u00e9moire et animations. HTML, CSS et JS purs.",
     'proj-kanban': 'Kanban sous-marin avec baleines, poissons et bulles anim\u00e9s. Colonnes glassmorphism et ambiance oc\u00e9an.',
     'proj-soon': 'D\u00e9mo \u2014 Bient\u00f4t'
   }
@@ -369,12 +383,19 @@ function applyLang(lang) {
     setTimeout(runTypewriter, 300);
   }
   setQ('.home__scroll-text', t['scroll-text']);
+  setQ('#home-availability-text', t['home-availability']);
+  var hCv = document.getElementById('home-cta-cv');
+  if (hCv) hCv.innerHTML = '<i class="ri-download-2-line"></i> ' + t['home-cta-cv'];
+  var hCt = document.querySelector('#home-cta-contact .button__ghost-title');
+  if (hCt) hCt.textContent = t['home-cta-contact'];
 
   /* About */
   setQ('.about .section__title-1', t['about-title']);
   setQ('.about__description', t['about-desc'], true);
-  var cvBtns = document.querySelectorAll('.about__buttons .button');
-  if (cvBtns[0]) cvBtns[0].innerHTML = '<i class="ri-download-2-line"></i> ' + t['about-cv-btn'];
+  var cvView = document.getElementById('about-cv-view');
+  if (cvView) cvView.innerHTML = '<i class="ri-eye-line"></i> ' + t['about-cv-view-btn'];
+  var cvDl = document.getElementById('about-cv-download');
+  if (cvDl) cvDl.innerHTML = '<i class="ri-download-2-line"></i> ' + t['about-cv-btn'];
   setQ('.about__buttons .button__ghost .button__ghost-title', t['about-contact-btn']);
 
   /* Experience */

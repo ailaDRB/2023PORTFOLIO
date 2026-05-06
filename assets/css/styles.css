@@ -2166,3 +2166,62 @@ body.dark-theme .moon { opacity: 1; }
 @media screen and (max-width: 768px) {
   .tagline-float { display: none; }
 }
+/*=============== AVAILABILITY BANNER ===============*/
+.home__availability {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .55rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, hsla(140, 70%, 92%, .7), hsla(140, 60%, 80%, .5));
+  border: 1px solid hsla(140, 60%, 50%, .35);
+  color: hsl(140, 50%, 22%);
+  font-family: var(--body-font);
+  font-size: var(--small-font-size);
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 14px hsla(140, 60%, 50%, .15);
+}
+.home__availability-dot {
+  width: .55rem;
+  height: .55rem;
+  border-radius: 50%;
+  background: hsl(140, 70%, 45%);
+  box-shadow: 0 0 0 0 hsla(140, 70%, 45%, .8);
+  animation: avail-pulse 1.8s ease-out infinite;
+  flex-shrink: 0;
+}
+@keyframes avail-pulse {
+  0%   { box-shadow: 0 0 0 0   hsla(140, 70%, 45%, .8); }
+  70%  { box-shadow: 0 0 0 10px hsla(140, 70%, 45%, 0); }
+  100% { box-shadow: 0 0 0 0   hsla(140, 70%, 45%, 0); }
+}
+body.dark-theme .home__availability {
+  background: linear-gradient(135deg, hsla(140, 50%, 20%, .5), hsla(140, 40%, 30%, .35));
+  color: hsl(140, 60%, 78%);
+  border-color: hsla(140, 60%, 50%, .35);
+}
+
+/*=============== HOME CTA BUTTONS ===============*/
+.home__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin: 1.25rem 0 1.5rem;
+}
+@media screen and (max-width: 480px) {
+  .home__availability { font-size: .78rem; padding: .45rem .85rem; }
+  .home__cta { gap: .5rem; }
+}
+
+/*=============== HONEYPOT (anti-spam) ===============*/
+.contact__hp {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
