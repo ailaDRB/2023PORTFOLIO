@@ -299,10 +299,10 @@ var T = {
     'footer-copy': '\u00a9 All Rights Reserved By',
     'stat-years': 'Months @ Carbon Six', 'stat-projects': 'Projects shipped', 'stat-skills': 'Skills',
     'wc-badge': '\u273f creative web developer \u273f',
-    'wc-hi': "hi, i'm dalia \u2726",
-    'wc-sub': 'based in <b>Toulon, France</b> \u2014 D\u00E9veloppeur Web et Web Mobile student &amp; <b>open to internship</b> \uD83C\uDF37<br>'
-            + 'i build cute, functional things \u2014 glassmorphism, pastel pixels &amp; clean code.',
-    'wc-btn': 'enter \u2661',
+    'wc-hi': "Hi, I'm Dalia \u2726",
+    'wc-sub': 'Based in <b>Toulon, France</b> \u2014 D\u00E9veloppeur Web et Web Mobile student &amp; <b>open to internship</b> \uD83C\uDF37<br>'
+            + 'I build cute, functional things \u2014 glassmorphism, pastel pixels &amp; clean code.',
+    'wc-btn': 'Enter \u2661',
     'proj-realestate': "Helps house hunters find the right property in seconds \u2014 smart filters by price, type and location, and a built-in inquiry form to contact owners directly. Angular + TypeScript.",
     'proj-learning': "A one-stop hub for new developers \u2014 handpicked tutorials, docs and tools, organised so beginners stop wasting time hunting through random YouTube playlists.",
     'proj-restaurant': "Lets customers browse the menu and place orders right from their phone \u2014 no calls, no queues. A polished React interface built around the customer's flow.",
@@ -350,10 +350,10 @@ var T = {
     'footer-copy': '\u00a9 Tous droits r\u00e9serv\u00e9s par',
     'stat-years': 'Mois @ Carbon Six', 'stat-projects': 'Projets livr\u00e9s', 'stat-skills': 'Comp\u00e9tences',
     'wc-badge': '\u273f d\u00e9veloppeuse web cr\u00e9ative \u273f',
-    'wc-hi': 'bonjour, je suis dalia \u2726',
-    'wc-sub': 'bas\u00e9e \u00e0 <b>Toulon</b> \u2014 en formation D\u00e9veloppeur Web et Web Mobile &amp; <b>en recherche de stage</b> \uD83C\uDF37<br>'
-            + 'je cr\u00e9e des choses mignonnes et fonctionnelles \u2014 glassmorphisme &amp; code propre.',
-    'wc-btn': 'entrer \u2661',
+    'wc-hi': 'Bonjour, je suis Dalia \u2726',
+    'wc-sub': 'Bas\u00e9e \u00e0 <b>Toulon</b> \u2014 en formation D\u00e9veloppeur Web et Web Mobile &amp; <b>en recherche de stage</b> \uD83C\uDF37<br>'
+            + 'Je cr\u00e9e des choses mignonnes et fonctionnelles \u2014 glassmorphisme &amp; code propre.',
+    'wc-btn': 'Entrer \u2661',
     'proj-realestate': "Aide \u00e0 trouver le bien parfait en quelques secondes \u2014 filtres intelligents par prix, type et localisation, formulaire de contact direct propri\u00e9taire. Angular + TypeScript.",
     'proj-learning': "Un hub centralis\u00e9 pour les d\u00e9butants \u2014 tutos, docs et outils s\u00e9lectionn\u00e9s, pour arr\u00eater de perdre du temps sur des playlists YouTube al\u00e9atoires.",
     'proj-restaurant': "Permet aux clients de consulter le menu et commander depuis leur t\u00e9l\u00e9phone \u2014 fini les appels et files d'attente. Interface React pens\u00e9e pour le client.",
