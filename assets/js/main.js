@@ -10,16 +10,16 @@
       '<div class="wc-deco wc-deco--tr">\u2729</div>' +
       '<div class="wc-deco wc-deco--bl">\u2661</div>' +
       '<div class="wc-deco wc-deco--br">\u274b</div>' +
-      '<div class="welcome-card__avatar">\uD83C\uDF38</div>' +
+      '<div class="welcome-card__avatar"><img src="assets/img/photo1.jpeg" alt="Dalia avatar" /></div>' +
       '<div class="welcome-card__badge" id="wc-badge">\u273f creative web developer \u273f</div>' +
-      '<h2 class="welcome-card__hi" id="wc-hi">hi, i\'m dalia \u2726</h2>' +
+      '<h2 class="welcome-card__hi" id="wc-hi">Hi, I\'m Dalia \u2726</h2>' +
       '<div class="wc-divider"><span>\u2726</span><span>\u273f</span><span>\u2726</span></div>' +
       '<p class="welcome-card__sub" id="wc-sub">' +
-        'based in <b>Toulon, France</b> \u2014 DWWM student &amp; <b>open to internship</b> \uD83C\uDF37<br>' +
-        'i build cute, functional things \u2014 glassmorphism, pastel pixels &amp; clean code.' +
+        'Based in <b>Toulon, France</b> \u2014 D\u00E9veloppeur Web et Web Mobile student &amp; <b>open to internship</b> \uD83C\uDF37<br>' +
+        'I build cute, functional things \u2014 glassmorphism, pastel pixels &amp; clean code.' +
       '</p>' +
       '<button class="welcome-card__btn" id="welcome-enter-btn">' +
-        '<span id="wc-btn">enter \u2661</span>' +
+        '<span id="wc-btn">Enter \u2661</span>' +
         '<i class="ri-arrow-right-line"></i>' +
       '</button>' +
     '</div>';
@@ -110,14 +110,14 @@ var currentLang = 'en';
 
 var typeRolesEN = [
   'Creative Web Developer',
-  'DWWM Student',
+  'D\u00e9veloppeur Web et Web Mobile Student',
   'Frontend Specialist',
   'UI/UX Enthusiast',
   'Seeking Internship \u2605'
 ];
 var typeRolesFR = [
   'D\u00e9veloppeuse Web Cr\u00e9ative',
-  'Etudiante DWWM',
+  '\u00c9tudiante D\u00e9veloppeur Web et Web Mobile',
   'Sp\u00e9cialiste Frontend',
   'Passionn\u00e9e UI/UX',
   'En recherche de stage \u2605'
@@ -142,9 +142,9 @@ setTimeout(runTypewriter, 1500);
 /*=============== SKILL TAGS ===============*/
 var aboutListEl = document.querySelector('.about__list');
 if (aboutListEl) {
-  var skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Angular', 'TypeScript',
-    'Git & GitHub', 'Bootstrap', 'Tailwind', 'Figma', 'PHP', 'SQL',
-    'WordPress', 'Umbraco', 'HubSpot', 'Three.js', '.NET', 'Python'];
+  var skills = ['HTML', 'CSS', 'JS', 'Umbraco', 'React', 'Angular',
+    'SQL', 'Node.js', 'API', 'WordPress', 'Tailwind', 'Python',
+    'PHP', 'Figma'];
   aboutListEl.innerHTML = '';
   var tagsWrap = document.createElement('div');
   tagsWrap.classList.add('skill-tags');
@@ -243,13 +243,13 @@ var T = {
     'nav-home': 'Home', 'nav-about': 'About Me', 'nav-projects': 'Projects',
     'nav-contact': 'Contact Me', 'nav-cv': 'Download CV',
     'home-desc': '<b><span class="typewriter" id="typewriter-text">Creative Web Developer</span></b>'
-      + ', based in <b>Toulon, France</b>. Currently training for a <b>Titre Pro DWWM (Bac+2)</b>'
+      + ', based in <b>Toulon, France</b>. Currently training for a <b>Titre Pro D\u00e9veloppeur Web et Web Mobile (Bac+2)</b>'
       + ' and actively <b>looking for an internship</b> (28 Sept \u2192 20 Nov 2025).'
       + ' Passionate about UX and new technologies \u2014 I design modern, memorable interfaces'
       + ' from Figma mockup to deployment.',
     'scroll-text': 'Scroll Down',
     'about-title': 'About Me.',
-    'about-desc': 'As a <b>Creative Web Developer</b> in training (Titre Pro DWWM, Bac+2),'
+    'about-desc': 'As a <b>Creative Web Developer</b> in training (Titre Pro Développeur Web et Web Mobile, Bac+2),'
       + ' I design modern and memorable web interfaces \u2014 from Figma mockup to deployment.'
       + ' I worked <b>7 months at Carbon Six</b> as a Web Developer intern: CMS integration'
       + ' (Umbraco, HubSpot, WordPress), client projects and quality standards.<br><br>'
@@ -275,7 +275,7 @@ var T = {
     'stat-years': 'Years Exp.', 'stat-projects': 'Projects', 'stat-skills': 'Skills',
     'wc-badge': '\u273f creative web developer \u273f',
     'wc-hi': "hi, i'm dalia \u2726",
-    'wc-sub': 'based in <b>Toulon, France</b> \u2014 DWWM student &amp; <b>open to internship</b> \uD83C\uDF37<br>'
+    'wc-sub': 'based in <b>Toulon, France</b> \u2014 D\u00E9veloppeur Web et Web Mobile student &amp; <b>open to internship</b> \uD83C\uDF37<br>'
             + 'i build cute, functional things \u2014 glassmorphism, pastel pixels &amp; clean code.',
     'wc-btn': 'enter \u2661',
     'proj-realestate': 'Built with Angular and TypeScript \u2014 filter properties by price, type and more. Intuitive interface with integrated inquiry feature.',
@@ -291,13 +291,13 @@ var T = {
     'nav-home': 'Accueil', 'nav-about': '\u00c0 Propos', 'nav-projects': 'Projets',
     'nav-contact': 'Me Contacter', 'nav-cv': 'T\u00e9l\u00e9charger CV',
     'home-desc': '<b><span class="typewriter" id="typewriter-text">D\u00e9veloppeuse Web Cr\u00e9ative</span></b>'
-      + ', bas\u00e9e \u00e0 <b>Toulon, France</b>. En formation <b>Titre Pro DWWM (Bac+2)</b>'
+      + ', bas\u00e9e \u00e0 <b>Toulon, France</b>. En formation <b>Titre Pro D\u00e9veloppeur Web et Web Mobile (Bac+2)</b>'
       + ' et en recherche active d\'un <b>stage</b> du 28 sept au 20 nov 2025.'
       + ' Passionn\u00e9e par l\'UX et les nouvelles technologies \u2014 je con\u00e7ois des'
       + ' interfaces modernes et m\u00e9morables, de la maquette Figma au d\u00e9ploiement.',
     'scroll-text': 'D\u00e9filer',
     'about-title': '\u00c0 Propos.',
-    'about-desc': 'D\u00e9veloppeuse web cr\u00e9ative en formation (<b>Titre Pro DWWM, Bac+2</b>),'
+    'about-desc': 'D\u00e9veloppeuse web cr\u00e9ative en formation (<b>Titre Pro D\u00e9veloppeur Web et Web Mobile, Bac+2</b>),'
       + ' je con\u00e7ois des interfaces modernes et m\u00e9morables \u2014 de la maquette Figma au d\u00e9ploiement.'
       + ' J\'ai travaill\u00e9 <b>7 mois chez Carbon Six</b> en stage : int\u00e9gration CMS'
       + ' (Umbraco, HubSpot, WordPress), projets client et gestion de la qualit\u00e9.<br><br>'
@@ -323,7 +323,7 @@ var T = {
     'stat-years': "Ans d'exp.", 'stat-projects': 'Projets', 'stat-skills': 'Comp\u00e9tences',
     'wc-badge': '\u273f d\u00e9veloppeuse web cr\u00e9ative \u273f',
     'wc-hi': 'bonjour, je suis dalia \u2726',
-    'wc-sub': 'bas\u00e9e \u00e0 <b>Toulon</b> \u2014 en formation DWWM &amp; <b>en recherche de stage</b> \uD83C\uDF37<br>'
+    'wc-sub': 'bas\u00e9e \u00e0 <b>Toulon</b> \u2014 en formation D\u00e9veloppeur Web et Web Mobile &amp; <b>en recherche de stage</b> \uD83C\uDF37<br>'
             + 'je cr\u00e9e des choses mignonnes et fonctionnelles \u2014 glassmorphisme &amp; code propre.',
     'wc-btn': 'entrer \u2661',
     'proj-realestate': 'Avec Angular et TypeScript \u2014 filtrez les propri\u00e9t\u00e9s par prix et type. Interface intuitive avec syst\u00e8me de contact int\u00e9gr\u00e9.',

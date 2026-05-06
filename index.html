@@ -127,24 +127,6 @@
       gtag("config", "G-JZPHEF7YXK");
     </script>
 
-    <!-- CAPTCHA GOOGLE -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script>
-      function enableBtn(token) {
-        if (token) {
-          document.querySelector("#contact-button").disabled = false;
-        }
-      }
-
-      function reVerify() {
-        grecaptcha.reset();
-        document.querySelector("#contact-button").disabled = true;
-      }
-
-      function tokenExpired() {
-        document.querySelector("#contact-button").disabled = true;
-      }
-    </script>
   </head>
 
   <body>
@@ -316,7 +298,7 @@
           <div class="about__info">
             
             <p class="about__description">
-              As a <b>Creative Web Developer</b> in training (Titre Pro DWWM, Bac+2), I design modern
+              As a <b>Creative Web Developer</b> in training (Titre Pro Développeur Web et Web Mobile, Bac+2), I design modern
               and memorable web interfaces — from Figma mockup to deployment. I worked
               <b>7 months at Carbon Six</b> as a Web Developer intern: CMS integration
               (Umbraco, HubSpot, WordPress), client projects and quality standards.
@@ -329,9 +311,8 @@
 
             <ul class="about__list">
               <li class="about__item">
-                <b>My Skills:</b> HTML, CSS, JavaScript, React, Angular, TypeScript,
-                Git & GitHub, Bootstrap, Tailwind, Figma, PHP, SQL, WordPress,
-                Umbraco, HubSpot, Three.js, .NET and Python.
+                <b>My Skills:</b> HTML, CSS, JS, Umbraco, React, Angular, SQL,
+                Node.js, API, WordPress, Tailwind, Python, PHP, Figma.
               </li>
             </ul>
 
@@ -364,179 +345,79 @@
             <h2 class="experience__box__title section__title-3">Front End</h2>
             <div class="experience__tabs">
               <article>
-                <img
-                  src="/assets/img/checkmark.webp"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="/assets/img/checkmark.webp" alt="Experience icon" class="icon" />
                 <div class="article__box"></div>
-                <div class="article__title">
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
+                <div class="article__title"><h3>HTML</h3></div>
               </article>
               <article>
-                <img
-                  src="/assets/img/checkmark.webp"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="/assets/img/checkmark.webp" alt="Experience icon" class="icon" />
                 <div class="article__box"></div>
-                <div class="article__title">
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
+                <div class="article__title"><h3>CSS</h3></div>
               </article>
               <article>
-                <img
-                  src="/assets/img/checkmark.webp"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="/assets/img/checkmark.webp" alt="Experience icon" class="icon" />
                 <div class="article__box"></div>
-                <div class="article__title">
-                  <h3>SCSS</h3>
-                  <p>Intermediate</p>
-                </div>
+                <div class="article__title"><h3>JS</h3></div>
               </article>
               <article>
-                <img
-                  src="/assets/img/checkmark.webp"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="/assets/img/checkmark.webp" alt="Experience icon" class="icon" />
                 <div class="article__box"></div>
-                <div class="article__title">
-                  <h3>JavaScript</h3>
-                  <p>Intermediate</p>
-                </div>
+                <div class="article__title"><h3>React</h3></div>
               </article>
               <article>
-                <img
-                  src="/assets/img/checkmark.webp"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="/assets/img/checkmark.webp" alt="Experience icon" class="icon" />
                 <div class="article__box"></div>
-                <div class="article__title">
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
+                <div class="article__title"><h3>Angular</h3></div>
               </article>
               <article>
-                <img
-                  src="/assets/img/checkmark.webp"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="/assets/img/checkmark.webp" alt="Experience icon" class="icon" />
                 <div class="article__box"></div>
-                <div class="article__title">
-                  <h3>Umbraco</h3>
-                  <p>Intermediate</p>
-                </div>
+                <div class="article__title"><h3>Tailwind</h3></div>
               </article>
-
               <article>
-                <img
-                  src="/assets/img/checkmark.webp"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="/assets/img/checkmark.webp" alt="Experience icon" class="icon" />
                 <div class="article__box"></div>
-                <div class="article__title">
-                  <h3>React</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src="/assets/img/checkmark.webp"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div class="article__box"></div>
-                <div class="article__title">
-                  <h3>Angular</h3>
-                  <p>Intermediate</p>
-                </div>
+                <div class="article__title"><h3>Figma</h3></div>
               </article>
             </div>
           </div>
           <div class="experience__box" id="experience-box-right">
-            <h2 class="experience__box__title section__title-3">Back End</h2>
+            <h2 class="experience__box__title section__title-3">Back End &amp; CMS</h2>
             <div class="experience__tabs">
               <article>
-                <img
-                  src="/assets/img/checkmark.webp"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="/assets/img/checkmark.webp" alt="Experience icon" class="icon" />
                 <div class="article__box"></div>
-                <div class="article__title">
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
+                <div class="article__title"><h3>Node.js</h3></div>
               </article>
               <article>
-                <img
-                  src="/assets/img/checkmark.webp"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="/assets/img/checkmark.webp" alt="Experience icon" class="icon" />
                 <div class="article__box"></div>
-                <div class="article__title">
-                  <h3>My SQL</h3>
-                  <p>Basic</p>
-                </div>
+                <div class="article__title"><h3>API</h3></div>
               </article>
               <article>
-                <img
-                  src="/assets/img/checkmark.webp"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="/assets/img/checkmark.webp" alt="Experience icon" class="icon" />
                 <div class="article__box"></div>
-                <div class="article__title">
-                  <h3>Python</h3>
-                  <p>Intermediate</p>
-                </div>
+                <div class="article__title"><h3>SQL</h3></div>
               </article>
               <article>
-                <img
-                  src="/assets/img/checkmark.webp"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="/assets/img/checkmark.webp" alt="Experience icon" class="icon" />
                 <div class="article__box"></div>
-                <div class="article__title">
-                  <h3>Fast API</h3>
-                  <p>Basic</p>
-                </div>
+                <div class="article__title"><h3>PHP</h3></div>
               </article>
               <article>
-                <img
-                  src="/assets/img/checkmark.webp"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="/assets/img/checkmark.webp" alt="Experience icon" class="icon" />
                 <div class="article__box"></div>
-                <div class="article__title">
-                  <h3>REST API</h3>
-                  <p>Basic</p>
-                </div>
+                <div class="article__title"><h3>Python</h3></div>
               </article>
               <article>
-                <img
-                  src="/assets/img/checkmark.webp"
-                  alt="Experience icon"
-                  class="icon"
-                />
+                <img src="/assets/img/checkmark.webp" alt="Experience icon" class="icon" />
                 <div class="article__box"></div>
-                <div class="article__title">
-                  <h3>Node JS</h3>
-                  <p>Basic</p>
-                </div>
+                <div class="article__title"><h3>WordPress</h3></div>
+              </article>
+              <article>
+                <img src="/assets/img/checkmark.webp" alt="Experience icon" class="icon" />
+                <div class="article__box"></div>
+                <div class="article__title"><h3>Umbraco</h3></div>
               </article>
             </div>
           </div>
@@ -809,18 +690,10 @@
                 <label for="message" class="contact__label"> Message </label>
               </div>
 
-              <div
-                class="g-recaptcha"
-                data-sitekey="6LevFzYoAAAAAAULqxbRdA8rTmtz3PK5dOiGGLuB"
-                data-callback="enableBtn"
-                data-expired-callback="tokenExpired"
-                data-error-callback="reVerify"
-              ></div>
               <button
                 class="contact__button button"
                 id="contact-button"
                 type="submit"
-                disabled
               >
                 <i class="ri-send-plane-line"></i> Send Message
               </button>
